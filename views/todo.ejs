@@ -9,22 +9,55 @@
                 text-decoration: none;
                 color: white;
             }
+            #z1 {
+               animation: type 3s steps(22) infinite;
+               overflow: hidden;
+               white-space: nowrap;
+               border-right: 4px solid;
+               width: 30ch;
+            }
+           #z2 {
+              animation: type1 1.5s steps(9) infinite;
+              overflow: hidden;
+              white-space: nowrap;
+              border-right: 4px solid;
+              width: 8ch;
+          }
+           @keyframes type {
+                0% {
+                    width: 0ch;
+                }
+                100% {
+                      width: 22ch;
+                }
+           }
+        
+           @keyframes type1 {
+               0% {
+                   width: 0ch;
+               }
+               100% {
+                    width: 9ch;
+               }
+            }
 
         </style>
     </head>
 
     <body>
+        <h1 id="z1"> color color which color do you want to choose.....<h1>
+        <h2 id="z2">Choose the color and know the hex code</h2>
         <h1><marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"><marquee behavior="alternate"><b><i>Hello I'm Riya</i></b></marquee></marquee></h1>
 
     <h1 align=center>Color code</h1>
       <form align=center>
-       <label for="clr">Choose a color? </label><br/><br/>
+       <label for="clr"><h3>Choose a color? </h3></label><br/><br/>
        <input type="color" name="clr" id="clr"/> <br/><br/>
        <input type="button" value="Submit" onClick="chColor()"/>
 
         <script>
             window.onload = function() {
-              setInterval(anim, 800);
+              setInterval(anim, 900);
             };
 
             function anim() {
@@ -33,7 +66,7 @@
 
             function chColor(){
                   var rep = document.getElementById("clr").value;
-                  alert("The hex code of this color is: "+rep);
+                  alert("Hey, You've got a good sense of colors...The hex code of this color is: "+rep);
                 }
         </script>
       </form>
