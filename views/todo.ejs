@@ -9,13 +9,45 @@
                 text-decoration: none;
                 color: white;
             }
+            #z1 {
+    animation: type 3s steps(50) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 50ch;
+}  
+    @keyframes type {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 50ch;
+    }
+}
+
+ #z2 {
+    animation: type1 1.5s steps(38) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 38ch;
+}
+
+@keyframes type1 {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 38ch;
+    }
+}
             
         </style>
     </head>
 
     <body>
-       <marquee> <h1 id> Color color which color do you want to choose.....<h1></marquee>
-        <marquee direction="right"><h2 id>Choose the color and know the hex code</h2></marquee>
+       <h1 id="z1"> Color color which color do you want to choose.....<h1>
+       <h2 id="z2">Choose the color and know the hex code</h2>
         <h1><marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"><marquee behavior="alternate"><b><i>Hello I'm Riya</i></b></marquee></marquee></h1>
 
     <h1 align=center>Color code</h1>
