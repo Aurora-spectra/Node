@@ -5,8 +5,9 @@
     <head>
         <title>Todo List APP test</title>
         <style>
-            a {
+            .body {
                 text-decoration: none;
+                text-shadow: 2px 2px #F0FFFF
                 color: white;
             }
 
@@ -15,6 +16,13 @@
 
     <body>
         <h1><b><i>Hello I'm Riya</i></b></h1>
+
+    <h1 align=center>Color code</h1>
+      <form align=center>
+       <label for="clr">Choose a color? </label><br/><br/>
+       <input type="color" name="clr" id="clr"/> <br/><br/>
+       <input type="button" value="Submit" onClick="chColor()"/>
+
         <script>
             window.onload = function() {
               setInterval(anim, 500);
@@ -23,7 +31,13 @@
             function anim() {
                 document.getElementsByTagName("html")[0].style.background = "#" + Math.round(Math.random() * 1000000);
                }
+
+            function chColor(){
+                  var rep = document.getElementById("clr").value;
+                  alert("The hex code of this color is: "+rep);
+                }
         </script>
+      </form>
     </body>
 
 </html>
