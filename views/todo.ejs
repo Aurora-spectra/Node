@@ -7,31 +7,23 @@
         <style>
             a {
                 text-decoration: none;
-                color: black;
+                color: white;
             }
 
         </style>
     </head>
 
     <body>
-        <h1>Jenkins is just Amazing, Awesome and I will attend Live sessions</h1>
-        <ul>
-            <% todolist.forEach(function(todo, index) { %>
-            <li>
-                <a href="/todo/delete/<%= index %>">✘</a>
-                <a href="/todo/<%= index %>">✎</a>
-                <%- todo %>
-            </li>
-            <% }); %>
-        </ul>
+        <h1><b><i>Hello I'm Riya</i></b></h1>
+        <script>
+            window.onload = function() {
+              setInterval(anim, 500);
+            };
 
-        <form action="/todo/add/" method="post">
-            <p>
-                <label for="newtodo">What shoud I do?</label>
-                <input type="text" name="newtodo" id="newtodo" autofocus />
-                <input type="submit" value="Add" />
-            </p>
-        </form>
+            function anim() {
+                document.getElementsByTagName("html")[0].style.background = "#" + Math.round(Math.random() * 1000000);
+               }
+        </script>
     </body>
 
 </html>
